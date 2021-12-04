@@ -1,7 +1,7 @@
 #/bin/bash
 
-if [[ -z "${REPO_URL}" ]]; then
-	echo "REPO_URL not set."
+if [[ -z "$URL}" ]]; then
+	echo "URL not set."
 	exit 1
 fi
 
@@ -38,5 +38,5 @@ else
 fi
 
 
-./config.sh --url ${REPO_URL} --token ${ACTIONS_TOKEN} --runnergroup ${RUNNER_GROUP} --labels ${LABELS} --name ${NAME} --work /actions-runner/work
+./config.sh --url ${URL} --token ${ACTIONS_TOKEN} --runnergroup ${RUNNER_GROUP} --labels ${LABELS} --name ${NAME} --work /actions-runner/work
 ./run.sh

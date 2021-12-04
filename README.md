@@ -3,5 +3,5 @@
 ## Run with docker
 
 ```
-docker run -e REPO_URL=https://github.com/mysterycamp -e ACTIONS_TOKEN=ADCDNRYQ34M5XQGK2XC4PR3BVOXKM f51d8d5425bc
+docker run -e URL=https://github.com/mysterycamp -e ACTIONS_TOKEN=ADCDNRZB7J4KECYVCD4AXTDBVO7WI -e PRIVATE_REGISTRY=registry.private.io -e PRIVATE_REGISTRY_USER=user -e PRIVATE_REGISTRY_TOKEN=FYXEi8PgjNaXv -e LABELS=testing-runner bb6d84951f7c
 ```

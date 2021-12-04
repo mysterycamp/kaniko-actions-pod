@@ -5,7 +5,7 @@ ENV RUNNER_VERSION=2.285.0
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
-RUN apt-get install -y curl 
+RUN apt-get install -y curl sudo
 
 # Install runner
 RUN mkdir actions-runner
@@ -17,6 +17,8 @@ RUN tar xzf ./actions-runner-linux-x64-${RUNNER_VERSION}.tar.gz
 RUN ./bin/installdependencies.sh
 
 RUN adduser runner
+RUN usermod -aG sudo runner
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
 RUN chown -R runner:runner /actions-runner
 RUN chmod -R 744 /actions-runner
