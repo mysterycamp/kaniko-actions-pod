@@ -3,11 +3,17 @@
 `kaniko-actions-pod` is a base image for Github Actions Runner that allows you to build container images using Kaniko. Created to be run on self-hosted non-docker kubernetes cluster. It's a mixture of Kaniko container & Ubuntu container with Github Actions runner installed.
 
 ## Configuration
-1. Find runner registration token (Go to "New runner" in your organisation's runners settings).
-2. Run it on locally with podman / docker or deploy it on Kubernetes.
-3. Add proper action definition to your Actions workflow.
+| Variable                 | Description                                                                | Required | Default value        |
+|--------------------------|----------------------------------------------------------------------------|----------|----------------------|
+| `URL`                    | Your organisation URL (e.g. `https://github.com/mysterycamp`)              | `true`   | -                    |
+| `ACTIONS_TOKEN`          | Runner registration token (Can be found in organisation's runners options) | `true`   | -                    |
+| `RUNNER_GROUP`           | Your runner group                                                          | `false`  | `default`            |
+| `LABELS`                 | Runner labels (comma-separated)                                            | `false`  | `self-hosted-kaniko` |
+| `PRIVATE_REGISTRY`       | Private registry that you want to push to                                  | `false`  | -                    |
+| `PRIVATE_REGISTRY_USER`  | Private registry username                                                  | `false`  | -                    |
+| `PRIVATE_REGISTRY_TOKEN` | Private registry token                                                     | `false`  | -                    |
 
-## Starting runner
+## Start runner
 
 ### Run with docker
 
@@ -17,3 +23,5 @@ docker run -e URL=https://github.com/mysterycamp -e ACTIONS_TOKEN=ADCDNRZB7J4KEC
 
 ### Run on K8S
 WIP
+
+## Configure worklow
