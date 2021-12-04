@@ -32,7 +32,7 @@ else
 		echo "Private registry credentials not set"
 	else
 		REGISTRY_AUTH="$(echo -n $PRIVATE_REGISTRY_USER:$PRIVATE_REGISTRY_TOKEN | base64)"
-		echo "{\"auths\":{\"registry.lakis.io\":{\"auth\":\"${REGISTRY_AUTH}\"}}}" > /kaniko/.docker/config.json
+		echo "{\"auths\":{\"$PRIVATE_REGISTRY\":{\"auth\":\"${REGISTRY_AUTH}\"}}}" > /kaniko/.docker/config.json
 		echo "Private registry $PRIVATE_REGISTRY initialized"
 	fi
 fi
