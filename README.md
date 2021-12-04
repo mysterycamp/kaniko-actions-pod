@@ -1,11 +1,11 @@
 # kaniko-actions-pod
 
-`kaniko-actions-pod` allows you to build container images via Github Actions on self-hosted non-docker kubernetes cluster. It's an Ubuntu container with Github Actions runner installed mixed with Kaniko container.
+`kaniko-actions-pod` is a base image for Github Actions Runner that allows you to build container images using Kaniko. Created to be run on self-hosted non-docker kubernetes cluster. It's a mixture of Kaniko container & Ubuntu container with Github Actions runner installed.
 
 ## How do I run it?
 1. Get runner registration token (You can find it by going to "New runner" in your organisation's runners settings).
 2. Run it on locally with podman / docker or deploy it on Kubernetes.
-4. Add proper action definition to your 
+3. Add proper action definition to your Actions workflow.
 
 ### Run with docker
 
