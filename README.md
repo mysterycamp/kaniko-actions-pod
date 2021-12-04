@@ -1,7 +1,6 @@
 # kaniko-actions-pod
 
-## What is it for?
-Build container images via Github Actions on self-hosted non-docker kubernetes cluster
+Build container images via Github Actions on self-hosted non-docker kubernetes cluster.
 
 ## How do I run it?
 You need to have runner registration token. You can find it by going to "New runner" in your organisation's runners settings.
