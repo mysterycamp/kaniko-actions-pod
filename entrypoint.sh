@@ -22,7 +22,7 @@ fi
 
 if [[ -z "${LABELS}" ]]; then
 	LABELS=self-hosted-kaniko,self-hosted-alpine
-	echo "LABELS not set, using default: self-hosted-kaniko,self-hosted-alpine"
+	echo "LABELS not set, using default: self-hosted-kaniko"
 fi
 
 if [[ -z "${PRIVATE_REGISTRY}" ]]; then
