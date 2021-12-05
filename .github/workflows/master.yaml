@@ -2,7 +2,7 @@ name: Create container
 
 on:
   push:
-    branches: [ 'main' ]
+    branches: [ 'testing' ]
 
 jobs:
   container:
