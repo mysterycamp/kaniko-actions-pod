@@ -31,4 +31,4 @@ docker run -e URL=https://github.com/mysterycamp \
 See `deployment`
 
 ## Configure worklow
-See `.github/workflows`
+See `.github/workflows`. This image can't be built from itself though, as it uses `/kaniko` directory.
