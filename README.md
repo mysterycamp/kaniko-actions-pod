@@ -32,3 +32,8 @@ See `deployment`
 
 ## Configure worklow
 See `.github/workflows`. This image can't be built from itself though, as it uses `/kaniko` directory.
+
+## TODO
+* [ ] Build image in actions using different image / cloud instances
+* [ ] Add CI tests
+* [ ] Restart pod when job is done
