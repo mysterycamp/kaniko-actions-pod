@@ -19,10 +19,16 @@ Following ENV vars can be set:
 ### Run with docker
 
 ```
-docker run -e URL=https://github.com/mysterycamp -e ACTIONS_TOKEN=ADCDNRZB7J4KECYVCD4AXTDBVO7WI -e PRIVATE_REGISTRY=registry.private.io -e PRIVATE_REGISTRY_USER=user -e PRIVATE_REGISTRY_TOKEN=FYXEi8PgjNaXv -e LABELS=testing-runner bb6d84951f7c
+docker run -e URL=https://github.com/mysterycamp \
+  -e ACTIONS_TOKEN=ADCDNRZB7J4KECYVCD4AXTDBVO7WIe \
+  -e PRIVATE_REGISTRY=registry.private.io \
+  -e PRIVATE_REGISTRY_USER=user \
+  -e PRIVATE_REGISTRY_TOKEN=FYXEi8PgjNaXv \
+  -e LABELS=testing-runner harbor.lakis.eu/mysterycamp/kaniko-actions-pod:0.0.2
 ```
 
 ### Run on K8S
-WIP
+See `deployments`
 
 ## Configure worklow
+See `.github/workflows`
