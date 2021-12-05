@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: kaniko-actions-pod
-          image: harbor.lakis.eu/mysterycamp/kaniko-actions-pod:0.0.1
+          image: harbor.lakis.eu/mysterycamp/kaniko-actions-pod:0.0.2
           imagePullPolicy: IfNotPresent
           envFrom:
           - secretRef:
