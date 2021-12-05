@@ -1,0 +1,16 @@
+name: Create container
+
+on:
+  push:
+    branches: [ 'main' ]
+
+jobs:
+  container:
+    runs-on: s0-kaniko-harbor
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Create container
+        run: |
+          sudo -E /kaniko/executor --use-new-run --context=dir://$GITHUB_WORKSPACE --dockerfile Dockerfile --destination "harbor.lakis.eu/mysterycamp/kaniko-actions-pod:0.1.$GITHUB_RUN_NUMBER"
