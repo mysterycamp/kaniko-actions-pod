@@ -28,7 +28,7 @@ docker run -e URL=https://github.com/mysterycamp \
 ```
 
 ### Run on K8S
-See `deployments`
+See `deployment`
 
 ## Configure worklow
 See `.github/workflows`
