@@ -30,6 +30,9 @@ docker run -e URL=https://github.com/mysterycamp \
 ### Run on K8S
 See `deployment`
 
+## actions-runner-controller
+Alternatively, use docker container to run with [actions-runner-controller](https://github.com/actions-runner-controller/actions-runner-controller). See `actions-runner-controller`.
+
 ## Configure worklow
 See `.github/workflows`. This image can't be built from itself though, as it uses `/kaniko` directory.
 
