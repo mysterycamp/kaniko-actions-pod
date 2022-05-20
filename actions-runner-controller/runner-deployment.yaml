@@ -1,0 +1,15 @@
+apiVersion: actions.summerwind.dev/v1alpha1
+kind: RunnerDeployment
+metadata:
+  name: runner-kaniko
+spec:
+  replicas: 2
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      organization: mysterycamp
+      image: harbor.lakis.io/mysterycamp/kaniko-actions-pod:0.0.2-arc
+      labels:
+        - s0-kaniko
+      group: s0

@@ -1,6 +1,6 @@
 # kaniko-actions-pod
 
-`kaniko-actions-pod` is a base image for Github Actions Runner that allows you to build container images using Kaniko. Created to be run on self-hosted non-docker kubernetes cluster. It's a mixture of Kaniko container & Ubuntu container with Github Actions runner installed.
+`kaniko-actions-pod` is a base image for Github Actions Runner that allows you to build container images using Kaniko. Created to be run on self-hosted non-docker kubernetes cluster. It's a mixture of Kaniko container & Ubuntu container with Github Actions runner installed. Be noticed that this container may still lacking some of the crucial features, feel free to test it. Use container for `actions-runner-controller` to use something battle-tested.
 
 ## Configuration
 Following ENV vars can be set:
@@ -29,6 +29,9 @@ docker run -e URL=https://github.com/mysterycamp \
 
 ### Run on K8S
 See `deployment`
+
+## actions-runner-controller
+Alternatively, use docker container to run with [actions-runner-controller](https://github.com/actions-runner-controller/actions-runner-controller). See `actions-runner-controller` for Dockerfile.
 
 ## Configure worklow
 See `.github/workflows`. This image can't be built from itself though, as it uses `/kaniko` directory.
