@@ -1,6 +1,6 @@
 FROM gcr.io/kaniko-project/executor:v1.6.0-debug as kaniko
 
-FROM summerwind/actions-runner:v2.291.1-ubuntu-20.04
+FROM summerwind/actions-runner:v2.296.0-ubuntu-20.04
 COPY --from=kaniko /kaniko /kaniko
 
 USER 0
